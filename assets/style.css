@@ -1,0 +1,762 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 13, 2017, 5:43:45 PM
+    Author     : Nels Danielson
+*/
+
+
+/******************************************************************************
+                *****               COMMON           *****
+******************************************************************************/     
+/******************************************************************************
+            FONT
+******************************************************************************/
+@font-face {
+    font-family: "customFont";
+    src: url(../assets/font.ttf);  
+}
+
+/******************************************************************************
+            BODY
+******************************************************************************/
+body {
+    width: 100%;
+    margin: 0;
+    background-color: rgb(203, 203, 195); 
+    font-family: customFont; 
+}
+
+/******************************************************************************
+            NAV BAR
+******************************************************************************/
+.topnav {
+    overflow: hidden;
+    float: right;
+}
+        .topnav a {
+            margin: 0 auto;
+            float: left;
+            display: block;
+            color: rgb(203, 203, 195);
+            text-align: center;
+            padding: 13px 15px 7px 15px;
+            text-decoration: none;
+            font-size: 30px;
+
+        }
+        .topnav a:hover {
+            background-color: rgba(0, 0, 0, .2);
+        }
+        .topnav .icon {
+            padding: 10px 15px;
+            display: none;
+        }
+/* contains topnav, extends the nav view in desktop mode */      
+.extends-nav {
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+#logo {
+    padding: 15px;
+}
+/******************************************************************************
+            FOOTER
+******************************************************************************/       
+/* Align footer text to bottom center */
+footer {
+    left: 0px;
+    bottom: 1px;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+        footer p {
+            display: inline-block;
+            color: #383838;
+            text-align: center;
+        }
+        
+        
+        
+/******************************************************************************
+                *****               HOME PAGE           *****
+******************************************************************************/     
+
+/******************************************************************************
+            IMAGE CAROUSEL
+******************************************************************************/     
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+    width: 95%;
+    max-width: 800px;
+    position: relative;
+    margin: 50px auto;
+}
+    .slideshow-container img {
+        border-radius: 4px;
+        border: 4px solid rgba(0, 0, 0, .7);
+    }
+
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+               
+        
+        
+/******************************************************************************
+        TEXT IMG
+******************************************************************************/     
+/* Size the text img for full screen */
+#textImg {
+    display: block;
+    width: 35%;
+    height: auto;
+    margin: 0 auto 50px auto;
+}
+
+/******************************************************************************
+        SERVICES TEXT
+******************************************************************************/     
+
+#services {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+        #services h2 {
+            display: block;
+            font-weight: normal;
+            color: #383838;
+            font-size: 80px;
+            margin: 50px 0 0 0;
+        }
+               /* Set ampersand to blue and shrink size */
+                #blue-and {
+                    color: #2754af;
+                    font-size: 60px;
+                }
+        #services ul {
+            display: block;
+            margin: 0 auto 50px auto;
+            font-size: 35px;
+            color: #2754af;
+        }
+                #services ul {
+                    display: block;
+                    margin: 0 auto 45px auto;
+                    width: 90%; 
+                }
+                .services-li {
+                    color: #383838;
+                }       
+
+/******************************************************************************
+            VIDEO 
+******************************************************************************/
+/* Size the video window for full screen */
+
+iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+
+/******************************************************************************
+            REVIEW TEXT 
+******************************************************************************/
+#reviewImg {
+    width: 30%;
+    display: block;
+    margin: 70px auto 15px auto;
+}
+
+        
+/******************************************************************************
+            SOCIAL  REVIEW LINKS
+******************************************************************************/       
+.social-container {
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+}
+    #social1 {
+        width: 24%;
+    }
+    #social2 {
+        width: 24%;
+    }
+    #social3 {
+        width: 24%;
+    }
+    #social4 {
+        width: 24%;
+    }
+
+/******************************************************************************
+            CONTACT ERIK
+******************************************************************************/       
+.contact-container {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 60px;
+    color: #383838;
+}  
+a.phone {
+    text-decoration: none;
+    color: #2754af;
+}
+
+/******************************************************************************
+                *****               COMING SOON           *****
+******************************************************************************/     
+.comingSoon {
+    width: 100%;
+    text-align: center;
+    font-size: 70px;
+    color: #383838;
+    margin: 100px 0 100px 0;
+    
+}
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+/************************************************************************************************************************************************************
+            MOBILE REACTIVE 480
+************************************************************************************************************************************************************/
+@media screen and (max-width: 480px) {
+#logo {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.topnav {
+    width: 100%;
+}
+
+
+/* Show only first link ("Home") and toggle link (.icon) */
+.topnav a:not(:first-child) {display: none;}
+.topnav a.icon {
+    float: right;
+    display: block;
+}
+/* The "responsive" class is added via JS when the user clicks on the icon.*/
+.topnav.responsive {position: relative;}
+.topnav.responsive a.icon {
+    position: absolute;        
+    right: 0;
+    top: 0;
+}
+.topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: center;
+}
+
+    
+
+/******************************************************************************
+***************                 HOME PAGE                  ********************
+******************************************************************************/     
+
+/******************************************************************************
+            SERVICES
+******************************************************************************/
+#services {
+    width: 100%;
+}
+        #services h2 {
+            text-align: center;
+            font-size: 65px;
+        }
+                #underline {
+                    display: block;
+                    width: 80%;
+                    height: 10px;
+                    margin: -8px auto 20px auto;
+                }
+                #services ul {
+                    width:75%; 
+                }
+
+
+/******************************************************************************
+            VIDEO FRAME
+******************************************************************************/       
+/* Size the video window for full screen */
+.video-container {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 200px;
+
+}
+iframe {
+    width: 97%;
+    height: 250px;
+    margin: 0 auto;
+}
+
+/******************************************************************************
+            SOCIAL  REVIEW LINKS
+******************************************************************************/       
+.social-container {
+    width: 96%;
+    margin: 0 auto;
+    display: block;
+}
+#social1 {
+    width: 49%;
+    float: left;
+}
+#social2 {
+    width: 49%;
+    float: right;
+}
+#social3 {
+    width: 49%;
+    float: left;
+}
+#social4 {
+    width: 49%;
+    float: right;
+}
+
+/******************************************************************************
+            REVIEW TEXT 
+******************************************************************************/
+#reviewImg {
+    width: 75%;
+    display: block;
+    margin: 50px auto 15px auto;
+}
+
+/******************************************************************************
+            CONTACT ERIK
+******************************************************************************/       
+.contact-container {
+    display: block;
+    text-align: center;
+    font-size: 27px;
+    color: #383838;
+    padding-top: 200px;
+}
+ 
+
+/******************************************************************************
+***************                 COMING SOON                ********************
+******************************************************************************/     
+.comingSoon {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    color: #383838;
+    margin: 100px 0 100px 0;  
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************************************************************************************************************************************
+            TABLET REACTIVE 481-1024
+************************************************************************************************************************************************************/
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+
+/******************************************************************************
+         LOGO   
+******************************************************************************/       
+    #logo {
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+    }
+    
+/******************************************************************************
+           NAVBAR 
+******************************************************************************/
+    .topnav {
+        width: 100%;
+    }
+    /* Hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+    /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+        position: absolute;        
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+
+
+    .slideshow-container {
+        width: 85%;
+    }    
+/******************************************************************************
+            SERVICES
+******************************************************************************/
+#services h2 {
+    text-align: center;
+} 
+        #underline {
+            display: block;
+            width: 80%;
+            height: 12px;
+            margin: -10px auto 20px auto;
+        }
+        #services ul {
+            width: 65%;
+        }  
+/******************************************************************************
+            VIDEO
+******************************************************************************/
+iframe {
+    width: 640px;
+    height: 360px;
+    margin: 0 auto;
+    border-radius: 4px;
+    border: 4px solid rgba(0, 0, 0, .7);
+
+}
+ 
+/******************************************************************************
+            REVIEWS
+******************************************************************************/
+#reviewImg {
+    width: 50%;
+}
+.social-container {
+    width: 90%;
+}
+
+/******************************************************************************
+            CONTACT ERIK
+******************************************************************************/       
+.contact-container {
+    font-size: 27px;
+}
+}    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************************************************************************************************************************************
+            DESKTOP REACTIVE 1024
+************************************************************************************************************************************************************/
+@media screen and (min-width: 1025px) {
+
+/******************************************************************************
+            TOP LOGO
+******************************************************************************/
+    #logo {
+        position: absolute;
+        width: 22%;
+        max-width: 400px
+   }
+
+/******************************************************************************
+            NAVBAR
+******************************************************************************/
+header {
+    max-height: 300px;
+}
+
+.extends-nav {
+    padding-top: 9%;
+    background: none;
+    width: 98%;
+    margin: 0 auto;
+    border-bottom: solid;
+    border-width: 5px;
+    border-color: rgba(0, 0, 0, .7);
+}
+
+.topnav a {
+    padding: 5px 30px;
+    display: inline;
+    color: #383838;
+}
+.topnav a:hover {
+    background-color: rgba(0, 0, 0, .1);
+}
+   
+   
+/******************************************************************************
+            BODY WRAP
+******************************************************************************/
+.body-wrapper {
+    width: 60%;
+    margin: 2% auto 0 auto;
+    border-style: outset;
+    border-width: 15px;
+    border-color: rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: 8px; 
+}
+
+/******************************************************************************
+            SLIDESHOW
+******************************************************************************/
+   .slideshow-container {
+       width: 90%;
+       margin: 15px auto;
+       border-color: rgba(0, 0, 0, .6);
+   }
+   
+/******************************************************************************
+            SERVICES
+******************************************************************************/
+#services {
+    width: 95%;
+}
+#services h2 {
+    width: 100%;
+    text-align: center;
+}
+        #services br {
+            display: none;
+        }   
+        #underline {
+            display: block;
+            width: 85%;
+            height: 12px;
+            margin: -10px auto 15px auto;
+        }
+/******************************************************************************
+            VIDEO
+******************************************************************************/
+iframe {
+    width: 640px;
+    height: 360px;
+    margin: 0 auto;
+    border-radius: 4px;
+    border: 4px solid rgba(0, 0, 0, .7);
+
+}
+ 
+/******************************************************************************
+            REVIEWS
+******************************************************************************/
+#reviewImg {
+    width: 50%;
+}
+.social-container {
+    width: 99%;
+}
+
+.social-container {
+    display: inline-block;
+    text-align: center;
+}
+
+}
